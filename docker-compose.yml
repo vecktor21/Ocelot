@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  ocelot.service_1:
+    image: ${DOCKER_REGISTRY-}ocelotservice
+    build:
+      context: .
+      dockerfile: Ocelot.Service/Dockerfile
+    networks:
+      - test_ocelot
+  ocelot.service_2:
+    image: ${DOCKER_REGISTRY-}ocelotservice
+    build:
+      context: .
+      dockerfile: Ocelot.Service/Dockerfile
+    networks:
+      - test_ocelot
+  ocelot.service_3:
+    image: ${DOCKER_REGISTRY-}ocelotservice
+    build:
+      context: .
+      dockerfile: Ocelot.Service/Dockerfile
+    networks:
+      - test_ocelot
+  ocelot.gateway:
+    image: ${DOCKER_REGISTRY-}ocelotgateway
+    build:
+      context: .
+      dockerfile: Ocelot.Gateway/Dockerfile
+    networks:
+      - test_ocelot
+
+networks:
+  test_ocelot:

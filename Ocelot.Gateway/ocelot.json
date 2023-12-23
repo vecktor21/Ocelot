@@ -1,0 +1,30 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [],
+      "UpstreamPathTemplate": "/{any}",
+      "DownstreamPathTemplate": "/{any}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ocelot.service_1",
+          "Port": 80
+        },
+        {
+          "Host": "ocelot.service_2",
+          "Port": 80
+        },
+        {
+          "Host": "ocelot.service_3",
+          "Port": 80
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://ocelot.gateway:5000"
+  }
+}
