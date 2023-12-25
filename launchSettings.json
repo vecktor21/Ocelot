@@ -5,7 +5,9 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "ocelot.service": "StartDebugging",
-        "ocelot.gateway": "StartDebugging"
+        "ocelot.gateway": "StartDebugging",
+        "grpc.web.server": "StartDebugging",
+        "grpc.web.client": "StartDebugging"
       }
     }
   }

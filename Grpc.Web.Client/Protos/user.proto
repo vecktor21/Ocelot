@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserRpc";
+
+package user;
+
+service UserRpc{
+	rpc GetUserById(GetUserByIdRequest) returns (User);
+	rpc CreateUser(UserCreateRequest) returns (User);
+}
+
+message GetUserByIdRequest{
+	int32 id = 1;
+}
+
+message User{
+	int32 id = 1;
+	string name = 2;
+	int32 age = 3;
+}
+
+message UserCreateRequest{
+	string name = 1;
+	int32 age = 2;
+}

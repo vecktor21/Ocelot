@@ -30,5 +30,23 @@ services:
     networks:
       - test_ocelot
 
+  grpc.web.server:
+    image: ${DOCKER_REGISTRY-}grpcwebserver
+    build:
+      context: .
+      dockerfile: Grpc.Web.Server/Dockerfile
+    networks:
+      - test_ocelot
+
+  grpc.web.client:
+    image: ${DOCKER_REGISTRY-}grpcwebclient
+    build:
+      context: .
+      dockerfile: Grpc.Web.Client/Dockerfile
+    networks:
+      - test_ocelot
+
 networks:
   test_ocelot:
+
+
