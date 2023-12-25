@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Grpc.Cli.Client": {
+      "commandName": "Project",
+      "commandLineArgs": "http://localhost:5028"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

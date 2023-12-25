@@ -46,7 +46,16 @@ services:
     networks:
       - test_ocelot
 
+  grpc.cli.client:
+    image: ${DOCKER_REGISTRY-}grpccliclient
+    build:
+      context: .
+      dockerfile: Grpc.Cli.Client/Dockerfile
+    depends_on: 
+      - grpc.web.server
+
 networks:
   test_ocelot:
+
 
 

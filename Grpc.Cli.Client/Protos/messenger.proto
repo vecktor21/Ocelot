@@ -1,8 +1,8 @@
-syntax = "proto3";
-
-option csharp_namespace = "Messenger";
+﻿syntax = "proto3";
 
 package messenger;
+
+option csharp_namespace = "messenger";
 
 message EmptyRequest{}
 

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Web.Server", "Grpc.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Web.Client", "Grpc.Web.Client\Grpc.Web.Client.csproj", "{61EE9122-1BF7-48B3-99C4-FEB29D47526B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc.Cli.Client", "Grpc.Cli.Client\Grpc.Cli.Client.csproj", "{3BEF9B15-C7D4-4721-8A8C-5EFAE524A722}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{61EE9122-1BF7-48B3-99C4-FEB29D47526B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61EE9122-1BF7-48B3-99C4-FEB29D47526B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61EE9122-1BF7-48B3-99C4-FEB29D47526B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEF9B15-C7D4-4721-8A8C-5EFAE524A722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEF9B15-C7D4-4721-8A8C-5EFAE524A722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEF9B15-C7D4-4721-8A8C-5EFAE524A722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEF9B15-C7D4-4721-8A8C-5EFAE524A722}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
