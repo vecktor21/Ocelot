@@ -11,6 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\messenger.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\messenger.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\user.proto" GrpcServices="Server" />
   </ItemGroup>
 

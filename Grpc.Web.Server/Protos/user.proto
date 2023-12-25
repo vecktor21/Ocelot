@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/Timestamp.proto";
+
 option csharp_namespace = "UserRpc";
 
 package user;
@@ -17,9 +19,11 @@ message User{
 	int32 id = 1;
 	string name = 2;
 	int32 age = 3;
+	google.protobuf.Timestamp registerDate=4;
 }
 
 message UserCreateRequest{
 	string name = 1;
 	int32 age = 2;
 }
+

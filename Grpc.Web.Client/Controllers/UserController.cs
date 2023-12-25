@@ -1,6 +1,7 @@
 ﻿using Grpc.Net.Client;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using UserRpc;
 
 namespace Grpc.Web.Client.Controllers
@@ -10,9 +11,9 @@ namespace Grpc.Web.Client.Controllers
     public class UserController : ControllerBase
     {
         UserRpc.UserRpc.UserRpcClient client;
-        public UserController()
+        public UserController(IOptions<Grpc.Web.Client.Options> options)
         {
-            GrpcChannel chanel = GrpcChannel.ForAddress("http://grpc.web.server:80");
+            GrpcChannel chanel = GrpcChannel.ForAddress(options.Value.GrpcServerAddress);
             client = new UserRpc.UserRpc.UserRpcClient(chanel);
             
         }

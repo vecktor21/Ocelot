@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Messenger";
+
+package messenger;
+
+message EmptyRequest{}
+
+message StreamResponse{ string content=1;}
+
+service Messenger{
+	rpc ServerStream (EmptyRequest) returns (stream StreamResponse);
+}
